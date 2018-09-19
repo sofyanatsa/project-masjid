@@ -9,7 +9,7 @@
 
     {{--Memanggil Bootstrap.
       Komentar ini tidak akan ditampilkan di browser--}}
-    <link href="{{ asset('bootstrap_3_3_6_dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bootstrap_3_3_6/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/flipclock.css') }}">
 
@@ -19,7 +19,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       @include('navbar')
       @yield('main')
     </div>
@@ -27,10 +27,13 @@
     @yield('footer')
 
     <script src="{{ asset('js/jquery_2_2_1.min.js') }}"></script>
-    <script src="{{ asset('bootstrap_3_3_6_dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bootstrap_3_3_6/dist/js/bootstrap.min.js') }}"></script>
 
-		<!-- <script src="{{ asset('js/libs/jquery.js') }}"></script> -->
-		<script src="{{ asset('js/flipclock.min.js') }}"></script>
+	<!-- <script src="{{ asset('js/libs/jquery.js') }}"></script> -->
+	<script src="{{ asset('js/flipclock.min.js') }}"></script>
+	<script src="{{ asset('js/PrayTimes.js') }}" type="text/javascript"></script>
+		
+	<!-- Flip Clock -->
     <script>
 
     var clock;
@@ -42,5 +45,23 @@
     			});
 
     </script>
+    
+    <!-- Pray Times -->
+    <script type="text/javascript">
+		
+		var date = new Date(); // today
+		var times = prayTimes.getTimes(date, [43, -80], -5); <!-- [latitude, longitude], timezone -->
+		var list = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight'];
+
+		var html = '<table id="timetable">';
+		html += '<tr><th colspan="2">'+ date.toLocaleDateString()+ '</th></tr>';
+		for(var i in list)	{
+			html += '<tr><td>'+ list[i]+ '</td>';
+			html += '<td>'+ times[list[i].toLowerCase()]+ '</td></tr>';
+		}
+		html += '</table>';
+		document.getElementById('table').innerHTML = html;
+
+	</script>
   </body>
 </html>
