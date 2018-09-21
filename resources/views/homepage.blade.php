@@ -4,12 +4,13 @@
   <div id="homepage">
 
 	<div class="col-lg-12">
-		<div class="col-lg-6">
-			<h2>Homepage</h2>
-			<p>Aplikasi <strong>laravelapp</strong> dibuat sebagai latihan mempelajari Laravel.</p>
-
+		<div class="col-lg-6" align="center">
+			<h1>Jadwal Sholat</h1>
+			<h4>Masjid Alumnni IPB</h4>
 
 			<div class="your-clock"></div>
+
+      <h2>Dzuhur</h2>
       <div class="clock"></div>
 
 			<div align="center" id="table"></div>
@@ -17,12 +18,12 @@
 		</div/>
 		<div class="col-lg-6">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			  <!-- Indicators -->
+			  <!-- Indicators
 			  <ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
-			  </ol>
+			  </ol>-->
 
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner">
@@ -54,8 +55,7 @@
 	</div>
 
 	<div class="col-sm-12" id="run-text">
-		<marquee behavior="scroll" direction="left">Teks Baris panjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang Teks Baris panjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang Teks Baris panjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang Teks Baris panjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang Teks Baris panjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang Teks Baris panjaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang
-		</marquee>
+		<marquee behavior="scroll" direction="left">LURUSKAN SHAFF ANDA KETIKA SHOLAT BERJAMAAH !</marquee>
 	</div>
 
   </div>

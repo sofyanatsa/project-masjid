@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jadwal Sholat</title>
+    <title>Admin Jadwal Sholat</title>
 
     {{--Memanggil Bootstrap.--}}
     <link href="{{ asset('bootstrap_3_3_6/dist/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styleadmin.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/flipclock.css') }}">
 
     <!--[if lt IE 9]
@@ -18,8 +18,8 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container-fluid">
-      {{--@include('navbar')--}}
+    <div class="container">
+      @include('navbar')
       @yield('main')
     </div>
 
